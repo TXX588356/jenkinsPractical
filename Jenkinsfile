@@ -7,10 +7,10 @@ pipeline {
             }
         }
         stage('Build') {
-            steps { bat 'gradlew build'}  //to build the application using batch file
+            steps { powershell 'gradle build'}  //to build the application using batch file
         }
         stage('Test') {
-            steps { bat 'gradlew test'}  //execute batch file gradle test
+            steps { powershell 'gradle test'}  //execute batch file gradle test
         }
         stage('Deploy') {
             steps { 
